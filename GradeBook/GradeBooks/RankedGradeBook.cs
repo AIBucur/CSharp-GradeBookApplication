@@ -15,7 +15,7 @@ namespace GradeBook.GradeBooks
         {
             char result = 'F';
 
-            if (Students.Count <= 5)
+            if (Students.Count < 5)
                 throw new InvalidOperationException("Ranked-grading requires a minimum of 5 students to work");
 
             var valueOfStep = (int)Math.Ceiling(Students.Count * 0.2);
